@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pragma_flutter_cats_app/presentation/ui/screens/home/widgets/cards_listview.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,9 +14,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {}, icon: const Icon(Icons.dark_mode_outlined))
         ],
       ),
-      body: const Center(
-        child: Text('Cats App Home Screen'),
-      ),
+      body: const CardsListview(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(Icons.catching_pokemon),

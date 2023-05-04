@@ -4,7 +4,7 @@ class AppTheme {
   final bool isDarkmode;
 
   AppTheme({
-    this.isDarkmode = true,
+    this.isDarkmode = false,
   });
 
   ThemeData getTheme() => ThemeData(
