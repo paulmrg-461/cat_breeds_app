@@ -6,12 +6,11 @@ import 'package:pragma_flutter_cats_app/config/constants/environment.dart';
 import 'package:pragma_flutter_cats_app/core/exceptions/api_exception.dart';
 
 class HttpRequest {
-  Future<Map<String, dynamic>> httpGetResponse(
-      {required String uri, bool withBaseUrl = true}) async {
+  Future httpGetResponse({required String uri, bool withBaseUrl = true}) async {
     try {
       final http.Response response = await http.get(
-        Uri.parse(withBaseUrl ? '${Environment.theCatApiBaseUrl}/$uri' : uri),
-      );
+          Uri.parse(withBaseUrl ? '${Environment.theCatApiBaseUrl}/$uri' : uri),
+          headers: Environment.theCatApiHeaders);
       if (response.statusCode == 200) {
         return json.decode(response.body);
       }
