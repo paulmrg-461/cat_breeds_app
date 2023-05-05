@@ -31,10 +31,6 @@ class HomeScreen extends StatelessWidget {
               child: (breedsProvider.errorMessage == '')
                   ? CardsListview(catBreeds: breedsProvider.catBreeds)
                   : ErrorView(errorMessage: breedsProvider.errorMessage)),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.catching_pokemon),
-      ),
     );
   }
 }
