@@ -2,12 +2,16 @@
 
 ## _Register to TheCatAPI_
 Please visit The Cat API.
+
 <a  href="https://thecatapi.com/">https://thecatapi.com </a>
+
 SignUp and obtain an API KEY to get all the cat breeds images.
 
 ## _Set your ApiKey at environment variables_
 If you have an api key from the Cat API, you must set your API KEY on .env file.
+
 The .env file is on the root project path:
+
 THE_CAT_API_KEY=PASTE_YOUR_API_KEY_HERE_WITHOUT_QUOTES
 
 ## _Flutter check_
@@ -41,10 +45,10 @@ $ 1
 This Flutter project is optimized to run on Android and iOS devices but was tested on Web and Linux.
 
 ## _Download demo release apk_
-<a  href="https://drive.google.com/file/d/10zFVqTQHIfvrQgyZdNQIEc-OgzT7z6X7/view?usp=sharing">Download apk from Google Drive</a>
+<a  href="https://drive.google.com/file/d/10zFVqTQHIfvrQgyZdNQIEc-OgzT7z6X7/view?usp=sharing" target="_blank">Download apk from Google Drive</a>
 
 ## _See demo video_
-<a href="https://drive.google.com/file/d/1qz385LfbxaAboTGVV6mUyLOD0PaOuR4M/view?usp=sharing">See demo video</a>
+<a href="https://drive.google.com/file/d/1qz385LfbxaAboTGVV6mUyLOD0PaOuR4M/view?usp=sharing" target="_blank">See demo video</a>
 
 ## _Mobile Screenshots_
 <a  href="https://drive.google.com/uc?export=view&id=1tklayU3PK9lXY7LDDO4qT5-jTYeVmnXT"><img  src="https://drive.google.com/uc?export=view&id=1tklayU3PK9lXY7LDDO4qT5-jTYeVmnXT"  style="width: 450px; max-width: 100%; height: auto"  title="Click to enlarge picture" />
@@ -65,6 +69,9 @@ This Flutter project is optimized to run on Android and iOS devices but was test
 
 Developed by:
 Paul Realpe
+
 Email: paulmrg461@gmail.com
+
 Phone: 3148580454
+
 <a  href="https://devpaul.co">https://devpaul.co/</a>
