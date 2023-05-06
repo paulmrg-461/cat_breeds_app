@@ -16,7 +16,7 @@ void main() async {
     ChangeNotifierProvider(
         lazy: false,
         create: (_) =>
-            BreedsProvider(breedsRepository: breedsRepository)..loadNextPage()),
+            BreedsProvider(breedsRepository: breedsRepository)..getCatBreeds()),
   ], child: const MyApp()));
 }
 

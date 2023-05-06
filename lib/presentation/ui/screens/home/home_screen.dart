@@ -27,23 +27,17 @@ class HomeScreen extends StatelessWidget {
           IconButton(
               tooltip: 'Search cat breeds',
               onPressed: () => showSearch(
-                  context: context, delegate: SearchCatBreedDelegate()),
+                  context: context,
+                  delegate: SearchCatBreedDelegate(
+                      searchCatBreedsCallback: breedsProvider.searchCatBreeds)),
               icon: const Icon(Icons.search_outlined)),
         ],
       ),
       body: breedsProvider.initialLoading
           ? const Center(child: CircularProgressIndicator.adaptive())
-          : NotificationListener<ScrollNotification>(
-              onNotification: (scrollNotification) {
-                if (scrollNotification is ScrollEndNotification &&
-                    scrollNotification.metrics.extentAfter == 0) {
-                  breedsProvider.incrementCurrentPage();
-                }
-                return true;
-              },
-              child: (breedsProvider.errorMessage == '')
-                  ? CardsListview(catBreeds: breedsProvider.catBreeds)
-                  : ErrorView(errorMessage: breedsProvider.errorMessage)),
+          : (breedsProvider.errorMessage == '')
+              ? CardsListview(catBreeds: breedsProvider.catBreeds)
+              : ErrorView(errorMessage: breedsProvider.errorMessage),
     );
   }
 }

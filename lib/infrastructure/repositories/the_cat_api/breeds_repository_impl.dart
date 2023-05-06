@@ -8,6 +8,6 @@ class BreedsRepositoryImpl implements BreedsRepository {
   BreedsRepositoryImpl({required this.breedsDatasource});
 
   @override
-  Future<List<CatBreed>> getCatBreedsByPage(int page) =>
-      breedsDatasource.getCatBreedsByPage(page);
+  Future<List<CatBreed>> getCatBreedsByPage() =>
+      breedsDatasource.getCatBreedsByPage();
 }
