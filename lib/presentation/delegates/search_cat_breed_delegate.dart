@@ -32,12 +32,12 @@ class SearchCatBreedDelegate extends SearchDelegate<CatBreed?> {
   }
 
   @override
-  Widget buildResults(BuildContext context) {
-    return Text('buildResults');
-  }
+  Widget buildResults(BuildContext context) => buildResultsAndSuggestions();
 
   @override
-  Widget buildSuggestions(BuildContext context) {
+  Widget buildSuggestions(BuildContext context) => buildResultsAndSuggestions();
+
+  FutureBuilder<List<CatBreed>> buildResultsAndSuggestions() {
     return FutureBuilder<List<CatBreed>>(
       future: searchCatBreedsCallback(query),
       builder: (context, snapshot) {
