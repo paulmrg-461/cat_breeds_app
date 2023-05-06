@@ -67,6 +67,16 @@ This Flutter project is optimized to run on Android and iOS devices but was test
 
 <a  href="https://drive.google.com/uc?export=view&id=1M70z1yzptHRabc9qJ28IgxTlijNHMgxx"><img  src="https://drive.google.com/uc?export=view&id=1M70z1yzptHRabc9qJ28IgxTlijNHMgxx"  style="width: 450px; max-width: 100%; height: auto"  title="Click to enlarge picture" />
 
+## _Improve Performance on devices_
+If you need test the pagination (items per page 10) on scrolling down to improve load performance. You can checkout to the branch optimization_pagination_on_scrolling.
+
+On the project path, please type in the terminal the following command:
+```
+$ git checkout optimization_pagination_on_scrolling
+
+Switched to branch 'optimization_pagination_on_scrolling'
+```
+
 Developed by:
 Paul Realpe
 
