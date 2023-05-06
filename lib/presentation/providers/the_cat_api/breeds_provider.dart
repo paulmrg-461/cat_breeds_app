@@ -7,17 +7,14 @@ class BreedsProvider extends ChangeNotifier {
   final BreedsRepository breedsRepository;
 
   String errorMessage = '';
-  int _currentPage = 1;
   bool initialLoading = true;
   List<CatBreed> catBreeds = [];
 
   BreedsProvider({required this.breedsRepository});
 
-  Future<void> loadNextPage() async {
+  Future<void> getCatBreeds() async {
     try {
-      final List<CatBreed> newCatBreeds =
-          await breedsRepository.getCatBreedsByPage(_currentPage);
-      catBreeds.addAll(newCatBreeds);
+      catBreeds = await breedsRepository.getCatBreedsByPage();
     } on ApiException catch (e) {
       errorMessage = e.message;
     }
@@ -26,8 +23,13 @@ class BreedsProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void incrementCurrentPage() {
-    _currentPage++;
-    loadNextPage();
+  Future<List<CatBreed>> searchCatBreeds(String query) async {
+    final List<CatBreed> searchResults = catBreeds
+        .where((catBreed) =>
+            catBreed.name.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+    print(query);
+    // notifyListeners();
+    return searchResults;
   }
 }
