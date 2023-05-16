@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pragma_flutter_cats_app/core/exceptions/api_exception.dart';
-import 'package:pragma_flutter_cats_app/domain/entities/cat_breed.dart';
-import 'package:pragma_flutter_cats_app/domain/repositories/the_cat_api/breeds_repository.dart';
+import 'package:cat_breeds_app/core/exceptions/api_exception.dart';
+import 'package:cat_breeds_app/domain/entities/cat_breed.dart';
+import 'package:cat_breeds_app/domain/repositories/the_cat_api/breeds_repository.dart';
 
 class BreedsProvider extends ChangeNotifier {
   final BreedsRepository breedsRepository;
@@ -28,8 +28,6 @@ class BreedsProvider extends ChangeNotifier {
         .where((catBreed) =>
             catBreed.name.toLowerCase().contains(query.toLowerCase()))
         .toList();
-    print(query);
-    // notifyListeners();
     return searchResults;
   }
 }

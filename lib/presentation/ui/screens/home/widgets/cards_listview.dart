@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pragma_flutter_cats_app/domain/entities/cat_breed.dart';
-import 'package:pragma_flutter_cats_app/presentation/ui/screens/home/widgets/item_card.dart';
+import 'package:cat_breeds_app/domain/entities/cat_breed.dart';
+import 'package:cat_breeds_app/presentation/ui/screens/home/widgets/item_card.dart';
 
 class CardsListview extends StatelessWidget {
   final List<CatBreed> catBreeds;

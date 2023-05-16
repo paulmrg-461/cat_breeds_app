@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
-import 'package:pragma_flutter_cats_app/config/constants/environment.dart';
-import 'package:pragma_flutter_cats_app/core/exceptions/api_exception.dart';
+import 'package:cat_breeds_app/config/constants/environment.dart';
+import 'package:cat_breeds_app/core/exceptions/api_exception.dart';
 
 class HttpRequest {
   Future httpGetResponse({required String uri, bool withBaseUrl = true}) async {

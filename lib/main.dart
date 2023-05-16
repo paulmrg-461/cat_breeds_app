@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:pragma_flutter_cats_app/config/routes/app_routes.dart';
-import 'package:pragma_flutter_cats_app/infrastructure/datasources/the_cat_api/breeds_datasource_impl.dart';
-import 'package:pragma_flutter_cats_app/infrastructure/repositories/the_cat_api/breeds_repository_impl.dart';
-import 'package:pragma_flutter_cats_app/presentation/providers/the_cat_api/breeds_provider.dart';
-import 'package:pragma_flutter_cats_app/presentation/providers/theme_provider/theme_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:cat_breeds_app/config/routes/app_routes.dart';
+import 'package:cat_breeds_app/infrastructure/datasources/the_cat_api/breeds_datasource_impl.dart';
+import 'package:cat_breeds_app/infrastructure/repositories/the_cat_api/breeds_repository_impl.dart';
+import 'package:cat_breeds_app/presentation/providers/the_cat_api/breeds_provider.dart';
+import 'package:cat_breeds_app/presentation/providers/theme_provider/theme_provider.dart';
 
 void main() async {
   await dotenv.load(fileName: '.env');
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
     return MaterialApp(
-        title: 'Pragma Cats App',
+        title: 'Cat Breeds App',
         initialRoute: AppRoutes.initialRoute,
         routes: AppRoutes.routes,
         theme: themeProvider.getTheme());

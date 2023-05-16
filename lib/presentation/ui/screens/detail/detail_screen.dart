@@ -1,7 +1,8 @@
+import 'package:cat_breeds_app/presentation/ui/shared/network_img.dart';
 import 'package:flutter/material.dart';
-import 'package:pragma_flutter_cats_app/domain/entities/cat_breed.dart';
-import 'package:pragma_flutter_cats_app/presentation/ui/screens/detail/widgets/characteristic_detail.dart';
-import 'package:pragma_flutter_cats_app/presentation/ui/screens/detail/widgets/temperament_row.dart';
+import 'package:cat_breeds_app/domain/entities/cat_breed.dart';
+import 'package:cat_breeds_app/presentation/ui/screens/detail/widgets/characteristic_detail.dart';
+import 'package:cat_breeds_app/presentation/ui/screens/detail/widgets/temperament_row.dart';
 
 class DetailScreen extends StatelessWidget {
   final CatBreed catBreed;
@@ -13,14 +14,24 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(catBreed.name),
+        actions: [
+          IconButton(
+              tooltip: 'Developer information',
+              onPressed: () => Navigator.pushNamed(context, 'developer'),
+              icon: const Icon(Icons.info_outline_rounded)),
+        ],
       ),
       body: Column(
         children: [
-          Container(
-            height: size.height * 0.375,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover, image: NetworkImage(catBreed.image))),
+          // Container(
+          //   height: size.height * 0.375,
+          //   decoration: BoxDecoration(
+          //       image: DecorationImage(
+          //           fit: BoxFit.cover, image: NetworkImage(catBreed.image))),
+          // ),
+          NetworkImg(
+            url: catBreed.image,
+            height: size.height * 0.385,
           ),
           Expanded(
             child: SingleChildScrollView(

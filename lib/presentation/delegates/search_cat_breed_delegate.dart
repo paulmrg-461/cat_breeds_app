@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pragma_flutter_cats_app/domain/entities/cat_breed.dart';
-import 'package:pragma_flutter_cats_app/presentation/ui/screens/home/widgets/cards_listview.dart';
-import 'package:pragma_flutter_cats_app/presentation/ui/shared/error_view.dart';
+import 'package:cat_breeds_app/domain/entities/cat_breed.dart';
+import 'package:cat_breeds_app/presentation/ui/screens/home/widgets/cards_listview.dart';
+import 'package:cat_breeds_app/presentation/ui/shared/error_view.dart';
 
 typedef SearchCatBreedsCallback = Future<List<CatBreed>> Function(String query);
 

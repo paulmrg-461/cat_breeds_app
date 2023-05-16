@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pragma_flutter_cats_app/presentation/delegates/search_cat_breed_delegate.dart';
-import 'package:pragma_flutter_cats_app/presentation/providers/the_cat_api/breeds_provider.dart';
-import 'package:pragma_flutter_cats_app/presentation/providers/theme_provider/theme_provider.dart';
-import 'package:pragma_flutter_cats_app/presentation/ui/screens/home/widgets/cards_listview.dart';
-import 'package:pragma_flutter_cats_app/presentation/ui/shared/error_view.dart';
+import 'package:cat_breeds_app/presentation/delegates/search_cat_breed_delegate.dart';
+import 'package:cat_breeds_app/presentation/providers/the_cat_api/breeds_provider.dart';
+import 'package:cat_breeds_app/presentation/providers/theme_provider/theme_provider.dart';
+import 'package:cat_breeds_app/presentation/ui/screens/home/widgets/cards_listview.dart';
+import 'package:cat_breeds_app/presentation/ui/shared/error_view.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
