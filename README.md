@@ -1,4 +1,4 @@
-# Cat Breeds App - Pragma Flutter Code Test
+# Cat Breeds App
 
 ## _Register to TheCatAPI_
 Please visit The Cat API.
